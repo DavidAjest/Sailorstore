@@ -43,7 +43,6 @@ export const getAllVessels = async () => {
     throw new Error(`Failed to fetch Vessels from the database, ${e}`);
   }
 };
-
 export const getVesselById = async (id: string) => {
   const q = `
     SELECT * FROM dbo.Vessels WHERE Vessel_id = @id
