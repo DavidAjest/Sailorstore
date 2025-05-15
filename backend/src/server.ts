@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import { connect, sql } from "./db/mssqlConfig";
 import { Response, Request } from "express";
 
-import boatRoutes from "./routes/boatRoutes";
+import vesselRoutes from "./routes/vesselRoutes";
 
 const app = express();
 
@@ -22,7 +22,7 @@ connect()
     console.log(error);
   });
 
-app.use("/api/boats", boatRoutes);
+app.use("/api/vessels", vesselRoutes);
 
 app.listen(3333, () => {
   console.log(`Example app listening on port ${3333}`);
